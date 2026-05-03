@@ -1,4 +1,4 @@
-import 'package:fivescreens/screens.dart/first_screen.dart';
+import 'package:fivescreens/screens/fivescreens_bottom_navbar.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,8 +14,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       //this is to remove the debug banner from the app
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      home: const FirstScreen(),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      ),
+      home: const FivescreensBottomNavbar(),
     );
   }
 }
