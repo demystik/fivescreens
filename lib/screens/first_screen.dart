@@ -58,14 +58,15 @@ class FirstScreen extends StatelessWidget {
             ),
           
             // Product Displays ----------------------------------------------
-            Expanded(
+            SizedBox(
+              height: screenSize.height * 0.7,
               child: GridView.builder(
-                padding: EdgeInsets.symmetric(horizontal: 4, vertical: 4),
                 itemCount: products.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
-                  crossAxisSpacing: 10,
-                  mainAxisSpacing: 10
+                  childAspectRatio: 0.6,
+                  // crossAxisSpacing: 10,
+                  // mainAxisSpacing: 10
                   
                   ), 
                 itemBuilder: (context, index){
@@ -73,16 +74,18 @@ class FirstScreen extends StatelessWidget {
                   return Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
+                          height: 180,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
                             image: DecorationImage(image: AssetImage(product.imageUrl,), fit: BoxFit.cover),
                           ),
                         ),
-                        Text(product.productName),
-                        Text(product.productMaterial),
-                        Text("${product.productPrice}"),
+                        Text(product.productName, style: TextStyle(fontWeight: FontWeight.w500, color: Colors.black, fontSize: 16),),
+                        Text(product.productMaterial, style: TextStyle(fontWeight: FontWeight.w400, color: Colors.grey, fontSize: 14),),
+                        Text("\$${product.productPrice}", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black, fontSize: 14),),
                       ],
                     ),
                   );
