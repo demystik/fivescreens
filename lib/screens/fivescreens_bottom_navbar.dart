@@ -34,7 +34,11 @@ class _FivescreensBottomNavbarState extends State<FivescreensBottomNavbar> {
         onTap: navigationBottomBar,
         type: BottomNavigationBarType.fixed,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Discover'),
+          BottomNavigationBarItem(
+            activeIcon: Icon(Icons.home_filled),
+            icon: Icon(Icons.home_outlined),
+            label: 'Discover',
+          ),
           BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Shop'),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite_border_outlined),
