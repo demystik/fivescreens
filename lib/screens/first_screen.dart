@@ -9,7 +9,15 @@ class FirstScreen extends StatelessWidget {
       body: SafeArea(
         child: Container(
           padding: EdgeInsets.all(8),
-          child: Column(children: []),
+          child: Column(
+            children: [
+              Container(
+                width: 100,
+                height: 100,
+                color: Colors.blue,
+              ),
+            ]
+            ),
         ),
       ),
     );

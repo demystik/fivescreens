@@ -1,4 +1,4 @@
-import 'package:fivescreens/screens.dart/first_screen.dart';
+import 'package:fivescreens/screens/first_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
