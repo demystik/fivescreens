@@ -5,20 +5,13 @@ class FirstScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Container(
-          padding: EdgeInsets.all(8),
-          child: Column(
-            children: [
-              Container(
-                width: 100,
-                height: 100,
-                color: Colors.blue,
-              ),
-            ]
-            ),
-        ),
+    //The network is too low, lemme just try and push these to github
+    //watch! and let's do it 2geda
+
+    return SafeArea(
+      child: Container(
+        padding: EdgeInsets.all(8),
+        child: Text("This is the first screen"),
       ),
     );
   }
